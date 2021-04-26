@@ -55,7 +55,10 @@ def generateCertificates():
 
         color = 'rgb(255, 255, 255)' #blanco
 
-        (xNombre, yNombre) = ((image.width / 2) - (image.width / 3)  , image.height/2 + (image.height / 50) + 110)
+        W = image.width
+        H = image.height
+        w, h = draw.textsize(nombreCompleto, font = fontName)
+        (xNombre, yNombre) = ((W-w)/2, (H-h)/2)
         (xTitulo, yTitulo) = ((image.width / 2) - (image.width / 2.97) + 100 , image.height/2 - (image.height / 5))
         (xFecha, yFecha) = ((image.width / 2) - (image.width / 5.5) - 50 , image.height/2 + (image.height / 2.5))
         (xSAITC, ySA) = ((image.width / 2) - (image.width / 5.5) + 220 , image.height/2 + (image.height / 3))
